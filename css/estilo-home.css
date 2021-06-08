@@ -1,0 +1,119 @@
+#sobre, #quartos, #rota{
+    padding: 40px 0px 0px;
+}
+
+.box-visao-geral{
+    background-image: url('../images/img-fundo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-visao-geral-titulo{
+    color: #fff;
+    font-size: 28px;
+    background-color: #0a9077b3;
+    border: 1px solid;
+    padding: 0 20px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.container-titulo{
+    text-align: center;
+    margin-bottom: 50px;
+    padding-top: 10px;
+}
+
+.container-titulo h2{
+    font-size: 32px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.quartos{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quarto{
+    padding-bottom: 20px;
+    border-bottom: 2px solid #00836a;
+    text-decoration: none;
+    color: #3d3d3d;
+}
+
+.quarto:nth-of-type(2){
+    margin: 0 30px;
+}
+
+.box-quarto{
+    width: calc(100% / 3 -60px);
+}
+
+.box-quarto img{
+    width: 100%;
+}
+
+.box-quarto figcaption{
+    font-size: 20px;
+    font-weight: 600;
+    text-transform: uppercase;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.container-rota{
+    text-align: center;
+}
+
+.descricoes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+
+.descricao{
+    width: 45%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+.descricao-img{
+    width: 100px;
+    height: 113px;
+    object-fit: cover;
+    margin-left: 10px;
+} 
+
+/* Responsiviness */
+/* Até 425px - mobile
+Até 768px - tablet
+Até 1024px - desktop
+Acima de 1024px - desktop */
+
+@media (max-width:1024px){
+    #sobre, #quartos, #rota{padding: 0 20px;}
+}
+
+@media (max-width: 768px){
+    #sobre, #quartos, #rota{padding: 40px 20px 0px;}
+    .box-visao-geral{height: 50vh;}
+    .container-titulo{margin-bottom: 30px;}
+}
+
+@media (max-width: 425px){
+    .box-visao-geral-titulo{padding: 10px; font-size: 20px;}
+    .box-quarto figcaption{font-size: 16px;}
+    .container-titulo:first-of-type p:first-of-type {margin-bottom: 20px;}
+    .descricoes{margin-top: 50px;flex-direction: column; align-items: center;}
+    .descricao{width: 90%;}
+}

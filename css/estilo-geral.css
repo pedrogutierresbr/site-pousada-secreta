@@ -1,0 +1,141 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: 'Source Sans Pro', sans-serif;
+    background-color: #fff;
+}
+
+main{
+    color: #3d3d3d;
+    margin-bottom: 50px;
+}
+
+.container{
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+/* Header */
+.topo{
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.topo .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 60px;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+
+.topo-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titulo{
+    margin: 0px;
+    font-weight: 600;
+    font-size: 24px;
+    color: #3d3d3d;
+    text-decoration: none;
+}
+
+.titulo span{
+    color: #6592c9;
+}
+
+.topo-links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.topo-link{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    color: #3d3d3d;
+    text-transform: uppercase;
+    padding: 10px 20px;
+}
+
+.topo-link:hover{
+    border-bottom: 3px solid #6592c9;
+}
+
+/* Footer */
+.rodape{
+    background-color: #49997d;
+    color: #fff;
+}
+
+.rodape h4{
+    font-size: 22px;
+}
+
+.rodape-container{
+    padding-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.rodape-info{
+    width: 23%;
+    display: flex;
+    align-items: center;
+}
+
+.rodape-link{
+    margin-right: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+.rodape-icone{
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.rodape-copyright{
+    width: 100%;
+    font-weight: 600;
+    color: #fff;
+    border-top: 1px solid #3b7863;
+    text-align: center;
+    padding: 20px 0; 
+    margin-top: 20px;
+}
+
+/* Responsiviness */
+/* Até 425px - mobile
+Até 768px - tablet
+Até 1024px - desktop
+Acima de 1024px - desktop */
+
+@media (max-width:1024px){
+    .rodape-container{padding: 10px 10px 0;}
+}
+
+@media (max-width: 641px){
+    .rodape-container{flex-direction: column; align-items: center;}
+    .rodape-info{width: 100%; justify-content: center; padding: 10px 0;}
+}
+
+@media (max-width: 480px){
+    .topo .container{flex-direction: column; justify-content: center;}
+    .topo-link{transition: all 100ms ease;}
+    .topo-link:hover{color: #6592c9; border-bottom: none;}
+}

@@ -1,0 +1,56 @@
+#solteiro, #casal, #familia{
+    padding: 40px 0px 0px;
+}
+
+.titulo-galeria{
+    height: 250px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top;
+}
+
+.quartos-galeria{
+    justify-content: space-around;
+    box-sizing: border-box;
+}
+
+.quarto-img{
+    width: calc(100% / 3 - 6px);
+}
+
+.container-lista{
+    padding-top: 50px;
+}
+
+.quarto-informacoes{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding-left: 100px;
+    text-align: left;
+}
+
+.quarto-informacoes li{
+    justify-content: space-around;
+    margin-bottom: 5px;
+    flex-basis: 250px;
+}
+
+/* Responsiviness */
+/* Até 425px - mobile
+Até 768px - tablet
+Até 1024px - desktop
+Acima de 1024px - desktop */
+
+@media (max-width:1024px){
+    #solteiro, #casal, #familia{padding: 0 20px;}
+}
+
+@media (max-width: 768px){
+    #solteiro, #casal, #familia{padding: 20px 20px 0px;}
+}
+
+@media (max-width: 680px){
+    .quarto-informacoes{justify-content: center; padding: 0;text-align: center;}
+    .quarto-informacoes li{list-style-type: none;}
+}
